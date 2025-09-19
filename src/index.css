@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Raleway", sans-serif !important;
+}
+
+:root {
+  --h1: 60px;
+  --h2: 48px;
+  --h3: 36px;
+  --h4: 28px;
+  --h5: 24px;
+  --h6: 20px;
+  --base: 16px;
+}
+
+p,
+span {
+  font-size: var(--base) !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+.font-base {
+  font-size: 16px;
+}
+.font-xl {
+  font-size: 20px;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-1 {
+  flex: 1;
+}
+
+.layout_sidebar {
+  position: fixed;
+  right: 0;
+  top: 5rem;
+  background-color: #fff;
+  width: 391px;
+  border: 1px solid #e0e0d7;
+  padding: 16px;
+}
+.layout_top {
+  margin-bottom: 2rem;
+}
+.color-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 4px;
+  margin-top: 1rem;
+  gap: 5px;
+}
+.color_label {
+  margin: 14px 0;
+  font-weight: 500;
+}
+.layers_heading {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 22px 0;
+}
+
+.layer_container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.layer {
+  background-color: #fff;
+  border: 1px solid #e0e0d7;
+  border-radius: 4px;
+  padding: 1rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.layer_title {
+  font-weight: 700;
+  margin-left: 0.5rem;
+  flex: 1;
+}
+.layer_col1 {
+  display: flex;
+  cursor: pointer;
+}
+.layer_col1 span {
+  width: auto;
+}
