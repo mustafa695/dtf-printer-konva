@@ -38,7 +38,7 @@ const TopToolbar = ({
     let rightSeleevSet = designJson["ybcAuiuui4"];
 
     visibleRef.current = false;
-    setSelectedId(null)
+    setSelectedId(null);
 
     let updateObjects = rightSeleevSet?.map((data) => ({
       ...data,
@@ -54,7 +54,9 @@ const TopToolbar = ({
 
     const flatArray = Object.values(newJson).flat();
 
-    setElements([...flatArray]);
+    if (flatArray?.length) {
+      setElements([...flatArray]);
+    }
 
     setTimeout(() => {
       const stage = stageRef.current;
@@ -73,9 +75,12 @@ const TopToolbar = ({
 
       setTimeout(() => {
         visibleRef.current = true;
-        let findPrevElements = designJson[currentAction];
 
-        setElements([...findPrevElements]);
+        if (flatArray?.length) {
+          let findPrevElements = designJson[currentAction];
+
+          setElements([...findPrevElements]);
+        }
       }, 500);
     }, 500);
   };
@@ -83,7 +88,9 @@ const TopToolbar = ({
   return (
     <div className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
       <div className="flex items-center gap-4">
-        <h2 className="!text-2xl font-semibold text-gray-800">Design T-Shirt</h2>
+        <h2 className="!text-2xl font-semibold text-gray-800">
+          Design T-Shirt
+        </h2>
         {selectedElement && (
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <span>Selected:</span>

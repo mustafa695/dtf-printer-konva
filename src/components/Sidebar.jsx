@@ -111,7 +111,7 @@ const Sidebar = ({ selectedElement, updateElement }) => {
     // add heart svg + text
     let widthDim = DESIGN_AREA.width / 2;
     let heightDim = DESIGN_AREA.height / 2;
-    setElements([
+    let obj = [
       ...elements,
       {
         id: generateId(),
@@ -150,7 +150,8 @@ const Sidebar = ({ selectedElement, updateElement }) => {
         fontFamily: "Georgia",
         fill: "#fff",
       },
-    ]);
+    ];
+    setElements(obj);
   };
 
   return (
