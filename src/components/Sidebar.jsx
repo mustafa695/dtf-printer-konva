@@ -91,8 +91,8 @@ const Sidebar = ({ selectedElement, updateElement }) => {
         const newImage = {
           id: generateId(),
           type: "image",
-          x: DESIGN_AREA.x + 50,
-          y: DESIGN_AREA.y + 50,
+          x: 10,
+          y: 10,
           width: Math.min(150, img.width),
           height: Math.min(150, img.height),
           src: e.target?.result,
@@ -157,7 +157,7 @@ const Sidebar = ({ selectedElement, updateElement }) => {
     <>
       <div className="w-80 bg-white shadow-lg border-r border-gray-200">
         <div className="p-6">
-          <h1 className="!text-4xl font-bold text-gray-800 !mb-8 !font-semibold">
+          <h1 className="!text-4xl text-gray-800 !mb-8 !font-semibold">
             DTF Designer
           </h1>
 
