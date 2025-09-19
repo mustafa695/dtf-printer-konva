@@ -38,6 +38,7 @@ const TopToolbar = ({
     let rightSeleevSet = designJson["ybcAuiuui4"];
 
     visibleRef.current = false;
+    setSelectedId(null)
 
     let updateObjects = rightSeleevSet?.map((data) => ({
       ...data,

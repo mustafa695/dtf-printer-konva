@@ -109,6 +109,7 @@ function TshirtCanvasDesign() {
   };
 
   const switchTshirtSides = (actionType) => {
+    setSelectedId(null);
     let newJson = { ...designJson };
     newJson[currentAction] = [...elements];
 
@@ -176,7 +177,7 @@ function TshirtCanvasDesign() {
                   />
                 )}
 
-                {seleevemode && <SeleeveRight color={tshirtColor}/>}
+                {seleevemode && <SeleeveRight color={tshirtColor} />}
 
                 {/* Design Area (clip group) */}
                 <Group
