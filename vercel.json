@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {
+      "ROLLUP_SKIP_NODEJS_NATIVE": "1",
+      "LIGHTNINGCSS_SKIP_NATIVE": "1"
+    }
+  }
+}
